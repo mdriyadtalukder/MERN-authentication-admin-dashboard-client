@@ -1,0 +1,126 @@
+.parent {
+    .profile {
+        .myProfile {
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .btn {
+                padding: 6px;
+                border: none;
+                background-color: teal;
+                color: white;
+                font-weight: bold;
+                cursor: pointer;
+                margin-top: 10px;
+                border-radius: 20px;
+                margin-bottom: 20px;
+            }
+
+            .img {
+                height: 200px;
+                width: 200px;
+                border-radius: 50%;
+                border: 0.5px solid #6439ff;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                position: relative;
+
+                img {
+                    height: 200px;
+                    width: 200px;
+                    border-radius: 50%;
+                }
+            }
+
+            .icons {
+                position: absolute;
+                top: 110px;
+                right: 558px;
+
+                .icon {
+                    cursor: pointer;
+                    color: #6439ff;
+                }
+            }
+
+            .info {
+                background-color: white;
+                width: 80%;
+                margin: auto;
+                -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+                box-shadow: 5px 5px 15px 5px rgba(201, 201, 201, 0.47);
+                padding: 20px;
+
+                .infoChild {
+
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 10px;
+
+                    p {
+                        font-weight: bold;
+                        font-size: 18px;
+
+                        span {
+                            font-weight: bold;
+                            font-size: 18px;
+                            color: #6439ff;
+                        }
+                    }
+
+                    .updated {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        .submitButton {
+                            width: 150px;
+                            padding: 10px;
+                            border: none;
+                            background-color: teal;
+                            color: white;
+                            font-weight: bold;
+                            cursor: pointer;
+                            margin-top: 10px;
+                        }
+
+                        .hiddenForm {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            margin-top: 20px;
+
+                            .hiddeninput {
+                                border: 0.5px solid teal;
+                                outline: none;
+                                background: transparent;
+                                padding: 5px;
+                                width: 80%;
+
+                            }
+
+                            .hiddenbtn {
+                                padding: 6px;
+                                border: none;
+                                background-color: teal;
+                                color: white;
+                                font-weight: bold;
+                                cursor: pointer;
+                                border-radius: 20px;
+                                margin-bottom: 20px;
+                            }
+                        }
+                    }
+
+
+                }
+            }
+        }
+    }
+
+}

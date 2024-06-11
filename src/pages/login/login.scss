@@ -1,0 +1,57 @@
+.login,
+.signup,
+.verify,
+.forget,
+.verified,
+.pass {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../../assets/bg.jpg');
+  background-position: center center;
+  background-size: cover;
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    input {
+      width: 200px;
+      height: 30px;
+      margin: 10px;
+    }
+
+    button {
+      width: 200px;
+      height: 30px;
+      border: none;
+      background-color: purple;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+  }
+
+  span {
+    font-size: 12px;
+    color: red;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+
+  .link,
+  p {
+    font-size: 12px;
+    color: purple;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+
+
+  }
+}
