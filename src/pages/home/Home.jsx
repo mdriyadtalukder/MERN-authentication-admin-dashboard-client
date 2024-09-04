@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Charts from '../../components/charts/Charts';
 import Featured from '../../components/featured/Featured';
 import Navbar from '../../components/navbar/Navbar';
@@ -5,7 +6,12 @@ import Sidebar from '../../components/sidebar/Sidebar';
 import TableList from '../../components/table/TableList';
 import Widget from '../../components/widget/Widget';
 import './home.scss'
+import toast from 'react-hot-toast';
 const Home = () => {
+    useEffect(() => {
+        toast.success("Admin email: admin@gmail.com and password: 12345");
+
+    }, []);
     return (
         <div className='home'>
             <Sidebar></Sidebar>

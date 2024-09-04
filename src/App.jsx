@@ -27,11 +27,11 @@ function App() {
         <Route path='/'>
           <Route index element={<RequireAuth><Home></Home></RequireAuth>}></Route>
           <Route path='login' element={<Login></Login>}></Route>
-          <Route path='signup' element={<SignUp></SignUp>}></Route>
+          {/* <Route path='signup' element={<SignUp></SignUp>}></Route>
           <Route path='verification' element={<Verification></Verification>}></Route>
           <Route path='forget' element={<ForgetPass></ForgetPass>}></Route>
           <Route path='verify' element={<Verify></Verify>}></Route>
-          <Route path='changepass' element={<ChnagePass></ChnagePass>}></Route>
+          <Route path='changepass' element={<ChnagePass></ChnagePass>}></Route> */}
           <Route path='profile' element={<RequireAuth><Profile></Profile></RequireAuth>}></Route>
           <Route path='users'>
             <Route index element={<RequireAuth><List></List></RequireAuth>}></Route>

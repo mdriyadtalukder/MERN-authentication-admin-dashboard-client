@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './login.scss';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
@@ -6,6 +6,7 @@ import { useGetCurrentUserQuery, useGetUserQuery, useUpdateCurrentUserMutation }
 import { getUser } from '../../RTK/features/user/userSlice';
 import Swal from 'sweetalert2';
 import { LinearProgress, Stack } from '@mui/material';
+import toast from 'react-hot-toast';
 
 const Login = () => {
     const [email, setEmail] = useState("");
@@ -13,10 +14,13 @@ const Login = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const { data: currentUserEmail, isLoading: loading, error: err } = useGetCurrentUserQuery() || null;
-    const [updateCurrentUser, {  error: er }] = useUpdateCurrentUserMutation();
+    const [updateCurrentUser, { error: er }] = useUpdateCurrentUserMutation();
     const { data, error } = useGetUserQuery(email) || null;
-    console.log(data)
 
+    useEffect(() => {
+        toast.success("Admin email: admin@gmail.com and password: 12345");
+        
+    }, []);
     const handleLogin = (e) => {
         e.preventDefault();
         if (data?.password === password && data?._id && data?.isEmailVerified) {
@@ -72,10 +76,10 @@ const Login = () => {
     return (
         <>
             {
-                ( loading) ? <Stack sx={{ width: '100%', color: 'grey.500' }} spacing={2}>
-                <LinearProgress color="secondary" />
-            
-            </Stack> :
+                (loading) ? <Stack sx={{ width: '100%', color: 'grey.500' }} spacing={2}>
+                    <LinearProgress color="secondary" />
+
+                </Stack> :
                     <div className="login">
 
                         <form onSubmit={handleLogin}>
@@ -92,9 +96,9 @@ const Login = () => {
                             <button type="submit">Login</button>
 
                         </form>
-                        {(error || err || er) && <span>Wrong email or password!</span>}
+                        {/* {(error || err || er) && <span>Wrong email or password!</span>}
                         <Link to='/forget' className='link'> <p>Forget password?</p></Link>
-                        <Link to='/signup' className='link'> <p>Are you new? Sign Up!</p></Link>
+                        <Link to='/signup' className='link'> <p>Are you new? Sign Up!</p></Link> */}
                     </div>
             }
         </>
